@@ -166,6 +166,15 @@
     line-height: 1.5;
 }
 
+.card_item:hover {
+    transform: translateY(-8px);
+    border-color: #62BDA0;
+    background: #132d4d;
+    box-shadow:
+      0 14px 35px rgba(0, 0, 0, 0.35),
+      0 0 18px rgba(98, 189, 160, 0.35);
+}
+
 /* Final component on landing page */
 
 .landing_header .bottom_header {

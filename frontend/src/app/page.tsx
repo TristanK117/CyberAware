@@ -76,7 +76,7 @@ export default function Home() {
         />
 
           <button onClick={sendMessage} disabled={loading}>
-            {loading ? "Sending..." : "Send"}
+            {loading ? "Sending..." : ""}
           </button>
         </div>
 

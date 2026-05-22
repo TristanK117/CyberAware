@@ -42,7 +42,7 @@ function GreenDotIcon(){
 }
 
 export default function Modules() {
-    const progress = 54;
+    const progress = 0;
     const currentModule = modules[0];
     const [userData, setUserData] = useState<UserData | null>(null);
 
@@ -65,11 +65,11 @@ export default function Modules() {
             <div className="modules_header">
                 <div className="dashboard_introduction">
                     <h2>Dashboard</h2>
-                    <h1>Welcome Back, <b>{userData?.email ?? "..."}</b>!</h1>
+                    <h1>Welcome Back, <b>{userData?.email ?? "Guest"}</b>!</h1>
                 </div>
                 <div className="course_completion_count">
-                    <h3>1/2</h3>
-                    <h2>completed</h2>
+                    <h3>2/2</h3>
+                    <h2>required</h2>
                 </div>
             </div>
 
@@ -84,7 +84,7 @@ export default function Modules() {
                         />
                         {currentModule.title}
                     </h1>
-                    <button>Resume →</button>
+                    <button>Complete →</button>
                 </div>
                 <div className="progress_tracker">
                         <div className="progress_bar">
