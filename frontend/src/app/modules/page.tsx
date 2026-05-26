@@ -90,7 +90,6 @@ export default function Modules() {
                         <div className="progress_bar">
                             <div className="progress_fill" style={{ width: `${progress}%` }}></div>
                         </div>
-                        <h2>{progress}% Complete</h2>
                 </div>
             </div>
 

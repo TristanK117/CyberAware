@@ -101,7 +101,7 @@ export default function PasswordMCQ() {
 
           <div className="mcq_next_button_wrapper">
             {currentQuestionIndex === questions.length - 1 ? (
-              <Link href="/modules/password/interactive-debrief">
+              <Link href="/modules/password/best-practices">
                 <button className="mcq_next_button" disabled={!canGoNext}>
                   Next Section
                 </button>
