@@ -117,6 +117,23 @@ export default function Modules() {
                             </div>
                         </Link>
                     ))}
+                     <Link href="/modules/gamified" className="module_card_link">
+                        <div className="module_card">
+                        <div className="module_badge status">NEW</div>
+                        <svg 
+                            className="module_card_icon"
+                            viewBox="0 0 75 75" 
+                            fill="none" 
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <rect x="20" y="10" width="35" height="50" rx="17" fill="#4B6EAF" opacity="0.3" stroke="#62BDA0" strokeWidth="2"/>
+                            <line x1="37.5" y1="10" x2="37.5" y2="35" stroke="#62BDA0" strokeWidth="2"/>
+                            <circle cx="37.5" cy="42" r="4" fill="#62BDA0"/>
+                        </svg>
+                        <h2>What Happens When You Click?</h2>
+                        <p>Live simulation — see the real consequences of clicking a phishing link.</p>
+                    </div>
+                </Link>
                 </div>
             </div>
         </div>
