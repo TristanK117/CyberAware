@@ -21,11 +21,11 @@ export default function BestPractices(){
         return <div>Best practices screen not found.</div>;
       }
     
-    const cards: Card[] = bestPracticesScreen.cards.map((card) => ({
+    const cards: Card[] = bestPracticesScreen.cards.map((card: any) => ({
         id: card.id,
         number: card.number,
-        title: "title" in card ? card.title : card.label,
-        description: "description" in card ? card.description : card.explanation,
+        title: card.title ?? card.label,
+        description: card.description ?? card.explanation,
     }));
 
     return(
