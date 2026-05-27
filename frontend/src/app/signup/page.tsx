@@ -36,7 +36,7 @@ export default function SignupPage() {
         const user = userCredential.user;
 
         // Call backend to create profile with ID token (not UID)
-        const res = await authenticatedFetch("http://localhost:8000/users/create", {
+        const res = await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/users/create`, {
             method: "POST",
             body: JSON.stringify({ email: user.email })
         });

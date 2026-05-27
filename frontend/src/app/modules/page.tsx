@@ -50,7 +50,7 @@ export default function Modules() {
         const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
             if (currentUser) {
                 try {
-                    const res = await authenticatedFetch(`http://localhost:8000/users/me`);
+                    const res = await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/users/me`);
                     const json = await res.json();
                     setUserData(json.data);
                 } catch (error) {

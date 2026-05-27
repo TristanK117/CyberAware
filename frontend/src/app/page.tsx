@@ -44,7 +44,7 @@ export default function Home() {
     setResponse("");
 
     try {
-      const res = await authenticatedFetch("http://localhost:8000/chat", {
+      const res = await authenticatedFetch(`${process.env.NEXT_PUBLIC_API_URL}/chat`, {
         method: "POST",
         body: JSON.stringify({ message }),
       });

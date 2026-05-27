@@ -1,3 +1,4 @@
+import os
 import httpx
 from fastapi import APIRouter, Depends
 from pydantic import BaseModel
@@ -20,8 +21,9 @@ async def chat(req: ChatRequest, uid: str = Depends(verify_id_token)):
     """
     try:
         async with httpx.AsyncClient() as client:
+            ml_service_url = os.getenv("ML_SERVICE_URL", "http://localhost:8001")
             response = await client.post(
-                "http://localhost:8001/chat",  # ML service
+                f"{ml_service_url}/chat",
                 json={"message": req.message},
                 timeout=5
             )
