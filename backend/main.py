@@ -1,4 +1,7 @@
 import firebase_admin
+from firebase_admin import credentials, firestore
+import os
+import json
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy import text
@@ -8,22 +11,15 @@ from datetime import datetime
 db = None
 
 try:
-    from firebase_admin import credentials, firestore
+    service_account_info = os.getenv("FIREBASE_SERVICE_ACCOUNT")
 
-    try:
-        # Try service account (local dev)
+    if service_account_info:
+        cred = credentials.Certificate(json.loads(service_account_info))
+    else:
+        # fallback for local dev
         cred = credentials.Certificate("serviceAccountKey.json")
-        if not firebase_admin._apps:
-            firebase_admin.initialize_app(cred)
-        print("Firebase initialized with service account")
 
-    except Exception as e:
-        print("Service account failed:", e)
-        print("Trying default credentials...")
-
-        if not firebase_admin._apps:
-            firebase_admin.initialize_app()
-        print("Firebase initialized with default credentials")
+    firebase_admin.initialize_app(cred)
 
     db = firestore.client()
 
@@ -41,7 +37,7 @@ app = FastAPI()
 # CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://cyberaware-5rha.onrender.com"],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
