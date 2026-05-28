@@ -31,7 +31,7 @@ export default function PasswordContext() {
       return <div>Context screen not found</div>;
     }
       const currentStep = 2;
-      const totalSteps = 6;
+      const totalSteps = 4;
       const progressPercent = (currentStep / totalSteps) * 100;
     return(
         <div>
