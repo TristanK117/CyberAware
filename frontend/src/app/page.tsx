@@ -66,7 +66,7 @@ export default function Home() {
       </div>
 
       <div className="landing_chat">
-        <h1>Have any questions? I can help!</h1>
+        <h1>Have any questions? Navigate to our Chatbot!</h1>
         <div className="landing_text_entry">
         <textarea
           className="landing_textbox"
