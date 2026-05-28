@@ -11,7 +11,7 @@ export default function PasswordPage() {
     }
     const { titleParts } = titleScreen;
       const currentStep = 1;
-      const totalSteps = 6;
+      const totalSteps = 4;
       const progressPercent = (currentStep / totalSteps) * 100;
       return (
         <div>
