@@ -16,6 +16,16 @@
     border: 1px solid #19686E;
     background: #102641;
     padding: 4px 8px;
+    margin-top: 10px;
+}
+
+.landing_header .alert {
+    border: 1px solid #8F2D2D;
+    background: #2A1118;
+    color: #FFDCDC;
+    font-size: larger;
+    border-radius: 5px;
+    margin: 0px 60px;
 }
 
 .landing_header {

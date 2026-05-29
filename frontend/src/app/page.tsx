@@ -61,6 +61,7 @@ export default function Home() {
   return (
     <div className="landing_body">
       <div className="landing_header">
+        <h2 className="alert">As of 5/29/26, this is an open-source project that we are moving forward from, please feel free to contribute and if you have any questions contact us at maijustin7@gmail.com. Thank you!</h2>
         <h2>ENTERPRISE CYBER TRAINING PLATFORM</h2>
         <h1 className="top_header">Stay Ahead of <b>Every Threat</b></h1>
       </div>
